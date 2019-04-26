@@ -18,17 +18,22 @@ module.exports = ({ app, pgResource }) => {
    */
 
   // @TODO: Refactor to use 'makeExecutableSchema' to wire up your schema to your resolvers:
-  const schema = undefined;
+  const schema = makeExecutableSchema({
+    typeDefs,
+    resolvers
+  });
   // -------------------------------
 
   const apolloServer = new ApolloServer({
     context: ({ req }) => {
-      // @TODO: Uncomment this later when we add auth (to be added to Apollo's context)
-      // const tokenName = app.get("JWT_COOKIE_NAME")
-      // const token = req ? req.cookies[tokenName] : undefined
-      // -------------------------------
+      const tokenName = app.get("JWT_COOKIE_NAME")
+      const token = req ? req.cookies[tokenName] : undefined
+
 
       return {
+        req,
+        token,
+        pgResource
         /**
          * @TODO: Provide Apollo context
          *
