@@ -30,7 +30,7 @@ module.exports = gql`
     email: String!
     fullname: String!
     bio: String
-    items [Item]
+    items: [Item]
     borrowed: [Item]
   }
 
@@ -70,6 +70,6 @@ module.exports = gql`
   }
 
   type Mutation {
-    addItem(item: NewItemInput!,image: Upload!): Item
+    addItem(item: NewItemInput!): Item
   }
 `;
