@@ -2,7 +2,7 @@
 
 Created a database through PostGreSQL to support a sharing economy for the application, while using React to build a user interface for users to share items.
 
-##Technologies Used
+## Technologies Used
 
 - GraphQL
 - Apollo
