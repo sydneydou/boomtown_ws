@@ -1,5 +1,15 @@
 # Boomtown 🏙
 
+Created a database through PostGreSQL to support a sharing economy for the application, while using React to build a user interface for users to share items.
+
+##Technologies Used
+
+- GraphQL
+- Apollo
+- PostGreSQL
+- Express/Node.js
+- React
+
 ## Server
 
 Commands must be run from the `server` directory:
